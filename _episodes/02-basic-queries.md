@@ -85,10 +85,14 @@ functions. For example, we could round the values to make them easier to read.
 > In SQLite, if you divide an integer by an integer, you get an integer, removing everything behind
 > the decimal, making 9/10 = 0 instead of 0.9.
 
+The ROUND function returns a result with a number decimal places indicated in the argument that follows the number to round. Specifying the number of decimal places is required by the ROUND function.
+
 ~~~
 SELECT first_author, title, ROUND(author_count/16.0, 2)
 FROM articles;
 ~~~
+
+
 {: .sql}
 
 > ## Challenge
